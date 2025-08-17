@@ -771,7 +771,7 @@ def start_webui():
         with open(user_file, 'w', encoding="utf-8") as file:
             yaml.dump(user_info, file)
 
-    app.run(host="0.0.0.0", port=5007)
+    app.run(host="[::]", port=5007)
 # 启动Eridanus并捕获输出，反馈到前端。
 # 不会写，不写！
 
