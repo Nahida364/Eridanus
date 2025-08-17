@@ -31,8 +31,8 @@ bot1 = ExtendBot(config.common_config.basic_config["adapter"]["ws_client"]["ws_l
 bot1.logger.info("正在初始化....")
 
 if config.common_config.basic_config["webui"]["enable"]:
-    bot2 = WebSocketBot("ws://127.0.0.1:5007/api/ws")
-    bot1.logger.server("🔧 WebUI 服务启动中，请在完全启动后，本机浏览器访问 http://localhost:5007")
+    bot2 = WebSocketBot("ws://[::1]:5007/api/ws")
+    bot1.logger.server("🔧 WebUI 服务启动中，请在完全启动后，本机浏览器访问 http://[::1]:5007")
     bot1.logger.server("🔧 若您部署的远程主机有公网ip或端口转发功能，请访问对应ip的5007端口，或设置的转发端口。")
     bot1.logger.server("🔧 WebUI 初始账号密码均为 eridanus")
     bot1.logger.server("🔧 WebUI 初始账号密码均为 eridanus")
