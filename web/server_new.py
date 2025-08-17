@@ -991,15 +991,15 @@ def start_webui():
             user_info['friends'] = yaml_file['friends']
             user_info['groups'] = yaml_file['groups']
         logger.server("登录信息读取成功。初始用户名和密码均为 eridanus ")
-        logger.server("请访问 http://localhost:5007 登录")
-        logger.server("请访问 http://localhost:5007 登录")
-        logger.server("请访问 http://localhost:5007 登录")
+        logger.server("请访问 http://[::1]:5007 登录")
+        logger.server("请访问 http://[::1]:5007 登录")
+        logger.server("请访问 http://[::1]:5007 登录")
     except:
         logger.warning("登录信息读取失败，已恢复默认。默认用户名/密码：eridanus")
         with open(user_file, 'w', encoding="utf-8") as file:
             yaml.dump(user_info, file)
 
-    app.run(host="0.0.0.0", port=5007,threaded=True)
+    app.run(host="[::]", port=5007,threaded=True)
 # 启动Eridanus并捕获输出，反馈到前端。
 # 不会写，不写！
 
